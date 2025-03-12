@@ -1,0 +1,63 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "title": "Warm Winter Coat",
+        "description": "The perfect jacket to ensure a cozy winter!",
+        "price": 32.99,
+        "thumbnail": "https://www.backpacksusa.com/cdn/shop/files/RR8802-Black-3_0f09aa28-7322-4426-9135-9299b91bbb35.jpg?v=1730497162&width=3000"
+      },
+      {
+        "id": 2,
+        "title": "Leather Jacket",
+        "description": "A stylish yet cozy look that you'll look sharp in.",
+        "price": 49.99,
+        "thumbnail": "https://firstmfg.com/cdn/shop/files/nancy-womens-moto-bomber-leather-jacketwomens-bomber-jacketfirst-manufacturing-company-421952.webp?v=1722346019"
+      },
+      {
+        "id": 3,
+        "title": "Weighted Blanket",
+        "description": "A blanket with extra weight for maximum coziness.",
+        "price": 24.99,
+        "thumbnail": "https://www.mysleepwize.com/cdn/shop/products/oie_transparent.png?v=1601013069"
+      },
+      {
+        "id": 4,
+        "title": "Gray Sweatpants",
+        "description": "Created with extra cozy soft cotton for both athletics and leisure.",
+        "price": 39.99,
+        "thumbnail": "https://store.taylorswift.com/cdn/shop/files/s6GnWp8e9g10GAl4sdhvyNbwSSa9A5fN_d0e939e0-18a4-406b-8dc2-7e693bc38083.png?v=1727963030&width=3000"
+      },
+      {
+        "id": 5,
+        "title": "Crewneck Sweatshirt",
+        "description": "Available in several varieties for peak coziness.",
+        "price": 32.99,
+        "thumbnail": "https://shop.vogue.com/cdn/shop/files/RustyRedSweatshirt1.png?v=1695214728&width=1000"
+      },
+      {
+        "id": 6,
+        "title": "Nike Hoodie",
+        "description": "Just like Nike, when it comes to coziness, we Just Do It.",
+        "price": 64.99,
+        "thumbnail": "https://images.footlocker.com/is/image/EBFL2/6L094X5C_a1?wid=500&hei=500&fmt=jpg-alpha"
+      },
+      {
+        "id": 7,
+        "title": "Neck Pillow",
+        "description": "Made with Memory Foam so you can remember what cozy feels like.",
+        "price": 18.99,
+        "thumbnail": "https://www.conair.com/on/demandware.static/-/Sites-master-us/default/dw33f89a4f/TS54MX/TS54MX-Deluxe_Memory_Foam_Neck_Pillow-MAIN.png"
+      },
+      {
+        "id": 8,
+        "title": "Fuzzy Socks",
+        "description": "With these socks, every step is a trip to Cozy Town.",
+        "price": 8.99,
+        "thumbnail": "https://worldssoftest.com/cdn/shop/files/WSCZCRW_948_CloudPeriwinkle.png?v=1685544597&width=1200"
+      }
+    ],
+    "total": 8,
+    "skip": 0,
+    "limit": 30
+  }
