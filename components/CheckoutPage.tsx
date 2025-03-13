@@ -61,7 +61,7 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
         }
 
         //If correct details, confirm payment
-        let baseUrl = "" //TODO: ADD VERSEL URL HERE ONCE DEPLOYED!!!
+        let baseUrl = "https://stripe-project-67e1.vercel.app"
         const env = process.env.NODE_ENV
             if(env == "development"){
                 baseUrl = "http://localhost:3000"
