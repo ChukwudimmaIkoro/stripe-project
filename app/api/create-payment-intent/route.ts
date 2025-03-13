@@ -3,9 +3,10 @@ import { NextRequest, NextResponse } from "next/server";
 import Stripe from "stripe";
 
 //Setup Stripe, call from dependency and invoke with secret key on server
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
+
 
 export async function POST(request: NextRequest) {
+    const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
     //Use try catch when dealing with async
     try {
         // Get the amount passed in by the user
