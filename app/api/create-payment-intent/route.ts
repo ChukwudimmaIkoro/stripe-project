@@ -1,8 +1,9 @@
 //API endpoint file to process PaymentIntent to create clientSecret, accepts only POST requests
 import { NextRequest, NextResponse } from "next/server";
+import Stripe from "stripe";
 
 //Setup Stripe, call from dependency and invoke with secret key on server
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string);
 
 export async function POST(request: NextRequest) {
     //Use try catch when dealing with async

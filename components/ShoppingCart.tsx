@@ -2,10 +2,12 @@
 
 import React, { useEffect, useState } from "react";
 import sumShoppingCart from "../lib/sumShoppingCart";
+import { Product } from "../lib/typeDefinitions";
+
 
 const ShoppingCart = () => {
 
-    const [shoppingCart, setShoppingCart] = useState([] as any); 
+    const [shoppingCart, setShoppingCart] = useState<Product[]>([]); 
 
     useEffect(() => {
         const storedCart = localStorage.getItem("shoppingCart");
@@ -20,7 +22,7 @@ const ShoppingCart = () => {
             <h1>Shopping Cart:</h1>
             <ul className= "grid grid-cols-4 gap-4 items-center">
             {
-                shoppingCart.map( (item: any, index: any) => (
+                shoppingCart.map( (item: Product, index: number) => (
                 <form key={index}>
                 <li className="w-52 mx-4" key={index}>
                     <img src={item.thumbnail} alt={item.title} />

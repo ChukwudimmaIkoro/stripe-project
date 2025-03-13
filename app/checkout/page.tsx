@@ -20,9 +20,8 @@ export default function Checkout() {
 
   const storedCartSum = localStorage.getItem("cartSum");
   const cartSum = storedCartSum ? JSON.parse(storedCartSum) : [];
-  let cartAmount = cartSum;
+  const amount = cartSum;
 
-  const amount = cartAmount;
   return (
       <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 
       rounded-mg bg-gradient-to-tr from-blue-500 to purple-500">

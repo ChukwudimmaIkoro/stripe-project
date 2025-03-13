@@ -2,17 +2,18 @@
 
 import React, { useEffect, useState } from "react";
 import data from "../app/dummy-data.json"
+import { Product } from "../lib/typeDefinitions";
 
 const Dashboard = () => {
 
-    const [productList, setProductList] = useState(data.products)
-    const [shoppingCart, setShoppingCart] = useState([] as any); //useState<Product[]>([]);
+    const productList = data.products;
+    const [shoppingCart, setShoppingCart] = useState<Product[]>([]);
 
 
-    const handleSubmit = (event : any, index : any) => {
+    const handleSubmit = (event : React.FormEvent<HTMLFormElement>, index : number) => {
         event.preventDefault();
         //Add to shopping cart object
-        setShoppingCart((prev : any) => [...prev, productList[index]]);
+        setShoppingCart((prev) => [...prev, productList[index]]);
     };
 
     useEffect(() => {
@@ -29,7 +30,7 @@ const Dashboard = () => {
             <h1>Products</h1>
             <ul className= "grid grid-cols-4 gap-4 items-center">
             {
-                productList.map( (item: any, index: any) => (
+                productList.map( (item : Product, index: number) => (
                 <form key={index} onSubmit={e => handleSubmit(e, index)}>
                 <li className="w-52 mx-4" key={index}>
                     <img src={item.thumbnail} alt={item.title} />

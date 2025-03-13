@@ -78,7 +78,6 @@ const CheckoutPage = ({ amount }: { amount: number }) => {
         if (error) {
             //Immediate error shown when confirming payment
             setErrorMessage(error.message);
-            console.log(error.message)
         } else {
             //UI auto closes with success, user is redirected to return url
         }
