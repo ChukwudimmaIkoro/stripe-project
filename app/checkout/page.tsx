@@ -18,7 +18,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
 export default function Checkout() {
 
-  const storedCartSum = localStorage.getItem("cartSum");
+  const storedCartSum = window.localStorage.getItem("cartSum");
   const cartSum = storedCartSum ? JSON.parse(storedCartSum) : [];
   const amount = cartSum;
 

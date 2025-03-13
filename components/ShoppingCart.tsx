@@ -10,11 +10,11 @@ const ShoppingCart = () => {
     const [shoppingCart, setShoppingCart] = useState<Product[]>([]); 
 
     useEffect(() => {
-        const storedCart = localStorage.getItem("shoppingCart");
+        const storedCart =  window.localStorage.getItem("shoppingCart");
         const cart = storedCart ? JSON.parse(storedCart) : [];
         setShoppingCart(cart);
         const cartSum = sumShoppingCart(cart);
-        localStorage.setItem("cartSum", JSON.stringify(cartSum))
+        window.localStorage.setItem("cartSum", JSON.stringify(cartSum))
     }, []);
 
     return (

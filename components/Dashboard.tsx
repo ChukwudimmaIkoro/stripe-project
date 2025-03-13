@@ -17,11 +17,11 @@ const Dashboard = () => {
     };
 
     useEffect(() => {
-        localStorage.clear(); //Ensure empty cart
+        window.localStorage.clear(); //Ensure empty cart
     }, []);
 
     useEffect(() => {
-        localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart))
+        window.localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart))
     }, [shoppingCart]);
     
 
