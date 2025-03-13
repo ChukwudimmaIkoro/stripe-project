@@ -19,7 +19,7 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
 export default function Checkout() {
 
-  const [amount, setAmount] = useState<number>(0);
+  const [amount, setAmount] = useState<number>(1.00);
 
   useEffect(() => {
       const storedCartSum = window.localStorage.getItem("cartSum");
