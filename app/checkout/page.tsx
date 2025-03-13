@@ -3,6 +3,7 @@
 //Import Stripe dependencies along with other app pages
 
 import CheckoutPage from "../../components/CheckoutPage";
+import React, { useEffect, useState } from "react";
 import convertToSubcurrency from "../../lib/convertToSubcurrency";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
@@ -18,9 +19,13 @@ const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY)
 
 export default function Checkout() {
 
-  const storedCartSum = window.localStorage.getItem("cartSum");
-  const cartSum = storedCartSum ? JSON.parse(storedCartSum) : [];
-  const amount = cartSum;
+  const [amount, setAmount] = useState<number>(0);
+
+  useEffect(() => {
+      const storedCartSum = window.localStorage.getItem("cartSum");
+      const cartSum = storedCartSum ? JSON.parse(storedCartSum) : [];
+      setAmount(cartSum);
+  }, []);
 
   return (
       <main className="max-w-6xl mx-auto p-10 text-white text-center border m-10 
